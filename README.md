@@ -1,0 +1,2 @@
+# craftbeer
+Static website
