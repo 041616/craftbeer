@@ -1,0 +1,14 @@
+const path = require('path');
+const variables = require(path.resolve(__dirname, './postcss.variables.js'));
+
+
+module.exports = {
+    parser: 'sugarss',
+    plugins: [
+        require('postcss-assets')({ loadPaths: ['public/'] }),
+        require('postcss-simple-vars')({ variables }),
+        require('postcss-nested'),
+        require('postcss-extend'),
+        require('postcss-color-function'),
+    ],
+};

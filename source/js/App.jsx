@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import * as url from 'utils/pages';
+import * as urls from 'utils/pages';
 import { Base } from 'components/Base';
 import { Nav } from 'components/Nav';
 import { Main } from 'pages/Main';
@@ -12,10 +12,10 @@ const App = () => (
         <Base>
             <Nav/>
             <Switch>
-                <Route exact path={url.MAIN}>
+                <Route exact path={urls.MAIN}>
                     <Main/>
                 </Route>
-                <Route exact path={url.ARTICLES}>
+                <Route exact path={urls.ARTICLES}>
                     <Articles/>
                 </Route>
             </Switch>
