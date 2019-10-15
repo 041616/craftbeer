@@ -72,6 +72,12 @@ module.exports = function(env, options) {
                 inject: 'head',
                 minify: mode === 'production',
             }),
+            new HtmlWebpackPlugin({
+                filename: 'articles.html',
+                template: './source/html/index.html',
+                inject: 'head',
+                minify: mode === 'production',
+            })
         ],
         optimization: {
             minimizer: [
