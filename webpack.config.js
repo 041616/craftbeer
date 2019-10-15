@@ -16,6 +16,14 @@ module.exports = function(env, options) {
             filename: mode === 'production' ? 'js/[name].[contenthash].js' : 'js/[name].js',
             chunkFilename: mode === 'production' ? 'js/[name].[contenthash].js' : 'js/[name].js',
         },
+        devServer: {
+            contentBase: [
+                path.join(__dirname, 'build'),
+                path.join(__dirname, 'public')
+            ],
+            historyApiFallback: true,
+            port: 9000,
+        },
         module: {
             rules: [
                 {

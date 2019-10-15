@@ -6,7 +6,7 @@ module.exports = ({ webpack: { mode } }) => ({
     parser: 'sugarss',
     plugins: [
         require('postcss-url')({ url: ({ url }) => (
-            mode === 'development' ? `../../public/${url}` : `../${url}`
+            mode === 'development' ? `/${url}` : `../${url}`
         ) }),
         require('postcss-simple-vars')({ variables }),
         require('postcss-nested'),
