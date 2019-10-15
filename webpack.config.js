@@ -39,7 +39,7 @@ module.exports = function(env, options) {
                                 modules: {
                                     localIdentName: '[local]-[hash:base64:5]',
                                 },
-                                // url: false
+                                url: false
                             }
                         },
                         'postcss-loader'
