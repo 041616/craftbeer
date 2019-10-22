@@ -1,7 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import * as urls from 'utils/pages';
-import { Base } from 'components/Base';
+import { Content } from 'components/Content';
+import { Footer } from 'components/Footer';
 import { Nav } from 'components/Nav';
 import { Main } from 'pages/Main';
 import { Articles } from 'pages/Articles';
@@ -9,8 +10,8 @@ import { Articles } from 'pages/Articles';
 
 const App = () => (
     <BrowserRouter>
-        <Base>
-            <Nav/>
+        <Nav/>
+        <Content>
             <Switch>
                 <Route exact path={urls.MAIN}>
                     <Main/>
@@ -19,7 +20,8 @@ const App = () => (
                     <Articles/>
                 </Route>
             </Switch>
-        </Base>
+        </Content>
+        <Footer/>
     </BrowserRouter>
 );
 
