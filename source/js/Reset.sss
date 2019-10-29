@@ -55,6 +55,17 @@ button, input, select, textarea
 a
     color: $link-color
     text-decoration: none
+    background-image: url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22%23fe6900%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%2F%3E%3C%2Fsvg%3E')
+    background-position: 50% 100%
+    background-repeat: no-repeat
+    background-size: 0 1px
+    transition-property: background-size, color
+    transition-duration: 0.2s
+    transition-timing-function: ease-out
+    &:hover
+        color: $link-color
+        background-size: 100% 1px
+
 
 :global(.app)
     display: flex

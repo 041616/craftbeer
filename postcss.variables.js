@@ -3,4 +3,5 @@ module.exports = {
     'base-color': '#fff',
     'base-background-image': 'img/bg.jpg',
     'link-color': '#fe6900',
+    'max-width': '980px'
 };

@@ -2,7 +2,10 @@ import React from 'react';
 
 
 const Main = () => (
-    <h1>Main Page</h1>
+    <React.Fragment>
+        <h1>Main Page</h1>
+        <a href="#">Duis aute irure dolor</a>
+    </React.Fragment>
 );
 
 

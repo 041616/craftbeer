@@ -1,34 +1,18 @@
-.block
-    flex: 0 0 auto
-
-
 .nav
+    margin: 0 -10px
+
+
+.list
     display: flex
+    flex-wrap: wrap
     align-items: center
-    justify-content: center
+    justify-content: space-between
+
+
+.item
+    margin: 0 10px
 
 
 .link
-    padding: 10px 5px
-    margin: 0 2.5px
-    color: $base-color
     font-size: 1.143em
-    flex: 1 1 0
-    &:hover
-        text-decoration: underline
-
-
-.linkLogo
-    order: 1
-    margin: 0 2.5px
-
-.linkAfter
-    order: 2
-    composes: link
-
-.logo
-    display: block
-    width: 190px
-    padding: 0 15px 15px
-    margin-top: -130px
-    background-color: $base-background-color
+    color: $base-color

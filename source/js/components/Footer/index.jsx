@@ -1,13 +1,12 @@
 import React from 'react';
 
 import css from './Footer.sss';
-import style from '../../App.sss';
 
 
 export const Footer = () => {
     return (
         <footer className={css.footer}>
-            <div className={style.container}>
+            <div className={css.container}>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
