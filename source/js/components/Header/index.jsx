@@ -11,10 +11,9 @@ export const Header = () => {
         <div className={css.header}>
             <div className={css.container}>
                 <Logo/>
-                <div className={css.holder}>
-                    <Slogan/>
-                    <Nav/>
-                </div>
+                <Slogan/>
+                <Nav/>
+                <div className={css.btnNav}/>
             </div>
         </div>
     );

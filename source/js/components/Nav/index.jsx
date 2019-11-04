@@ -6,8 +6,10 @@ import css from './Nav.sss';
 
 
 export const Nav = () => {
+    // на ресайз убирать navActive
     return (
         <nav className={css.nav}>
+            <button className={css.close} onClick={() => alert('asdadasd')}/>
             <ul className={css.list}>
                 <li className={css.item}>
                     <Link className={css.link} to={MAIN}>Головна</Link>

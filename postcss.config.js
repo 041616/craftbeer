@@ -13,6 +13,7 @@ module.exports = ({ webpack: { mode } }) => ({
         require('postcss-simple-vars')({ variables }),
         require('postcss-nested'),
         require('postcss-extend'),
+        require('postcss-hexrgba'),
         require('postcss-color-function'),
         require('postcss-calc'),
     ],

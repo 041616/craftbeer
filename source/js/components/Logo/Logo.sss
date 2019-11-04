@@ -1,16 +1,21 @@
-.logoContainer
-    width: 190px
-    margin-right: 30px
-
-
 .link
     position: relative
     z-index: 1
-    display: block
-    margin: -15px 0 -75px
+    float: left
+    width: 190px
+    margin: -15px 30px -75px 0
     border-radius: 5px
     box-shadow: 0 0px 15px 15px $base-background-color
     background: $base-background-color
+    transition: all 0.2s ease-out
+    @media $max-768
+        float: none
+        display: inline-block
+        margin: -100px 30px 0 0
+        vertical-align: middle
+    @media $max-580
+        width: 130px
+        margin: -67px 30px 0 0
 
 
 .logo

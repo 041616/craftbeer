@@ -5,10 +5,9 @@ import LargeLogo from 'components/SVG/LargeLogo';
 
 import css from './Logo.sss';
 
+
 export const Logo = () => (
-    <div className={css.logoContainer}>
-        <Link className={css.link} to={MAIN}>
-            <LargeLogo className={css.logo}/>
-        </Link>
-    </div>
+    <Link className={css.link} to={MAIN}>
+        <LargeLogo className={css.logo}/>
+    </Link>
 );
