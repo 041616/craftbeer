@@ -27,6 +27,16 @@ module.exports = function(env, options) {
         module: {
             rules: [
                 {
+                //     test: /\.svg$/,
+                //     use: {
+                //         loader: 'file-loader',
+                //         options: {
+                //             name: '[name].[ext]',
+                //             // publicPath: '/img/',
+                //             outputPath: '../public/img',
+                //         },
+                //     },
+                // }, {
                     test: /\.jsx?$/,
                     exclude: /node_modules/,
                     use: {
@@ -61,6 +71,7 @@ module.exports = function(env, options) {
                 components: path.resolve(__dirname, 'source/js/components'),
                 pages: path.resolve(__dirname, 'source/js/pages'),
                 utils: path.resolve(__dirname, 'source/js/utils'),
+                images: path.resolve(__dirname, 'public/img'),
             }
         },
         plugins: [
