@@ -27,16 +27,16 @@ module.exports = function(env, options) {
         module: {
             rules: [
                 {
-                //     test: /\.svg$/,
-                //     use: {
-                //         loader: 'file-loader',
-                //         options: {
-                //             name: '[name].[ext]',
-                //             // publicPath: '/img/',
-                //             outputPath: '../public/img',
-                //         },
-                //     },
-                // }, {
+                    test: /\.svg$/,
+                    use: {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            publicPath: '/img/',
+                            outputPath: '../public/img',
+                        },
+                    },
+                }, {
                     test: /\.jsx?$/,
                     exclude: /node_modules/,
                     use: {
