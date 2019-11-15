@@ -71,7 +71,7 @@ module.exports = function(env, options) {
                 components: path.resolve(__dirname, 'source/js/components'),
                 pages: path.resolve(__dirname, 'source/js/pages'),
                 utils: path.resolve(__dirname, 'source/js/utils'),
-                images: path.resolve(__dirname, 'public/img'),
+                root: __dirname,
             }
         },
         plugins: [

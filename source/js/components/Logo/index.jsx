@@ -4,14 +4,20 @@ import { MAIN } from 'utils/pages';
 import largeLogo from './images/logo-large.svg';
 import mediumLogo from './images/logo-medium.svg';
 import smallLogo from './images/logo-small.svg';
+import postcssVariables from 'root/postcss.variables';
 
 import css from './Logo.sss';
 
 
-export const Logo = () => (
-    <Link className={css.link} to={MAIN}>
-        <img className={css.logo} src={largeLogo} alt='Craftbeer Horishni Plavni'/>
-        <img className={css.logo} src={mediumLogo} alt='Craftbeer Horishni Plavni'/>
-        <img className={css.logo} src={smallLogo} alt='Craftbeer Horishni Plavni'/>
-    </Link>
-);
+export const Logo = () => {
+    return (
+        <Link className={css.link} to={MAIN}>
+            <picture>
+                <source srcset={largeLogo} media='(min-width: 769px)'/>
+                <source srcset={mediumLogo} media='(max-width: 768px) and (min-width: 421px)'/>
+                <source srcset={smallLogo} media='(max-width: 420px)'/>
+                <img className={css.logo} src={largeLogo} alt='Craftbeer Horishni Plavni'/>
+            </picture>
+        </Link>
+    );
+};
