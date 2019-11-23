@@ -13,9 +13,9 @@ export const Logo = () => {
     return (
         <Link className={css.link} to={MAIN}>
             <picture>
-                <source srcset={largeLogo} media='(min-width: 769px)'/>
-                <source srcset={mediumLogo} media='(max-width: 768px) and (min-width: 421px)'/>
-                <source srcset={smallLogo} media='(max-width: 420px)'/>
+                <source srcSet={largeLogo} media='(min-width: 769px)'/>
+                <source srcSet={mediumLogo} media='(max-width: 768px) and (min-width: 421px)'/>
+                <source srcSet={smallLogo} media='(max-width: 420px)'/>
                 <img className={css.logo} src={largeLogo} alt='Craftbeer Horishni Plavni'/>
             </picture>
         </Link>

@@ -1,18 +1,21 @@
 .header
-    flex: 0 0 auto
-    padding: 20px 20px 0
+    padding: 20px
+
+
+.grid
+    display: grid
+    grid-template-areas: "logo slogan" "logo nav"
+    grid-template-columns: auto 1fr
+    grid-gap: 0 30px
+    transition: all 0.2s ease-out
+    @media $max-768
+        grid-template-areas: "logo slogan" "nav nav"
+        grid-gap: 0 20px
+    @media $max-540
+        grid-template-areas: "logo slogan nav"
 
 
 .container
+    composes: grid
     max-width: $max-width
     margin: 0 auto
-
-
-.btnNav
-    display: none
-    @media $max-580
-        display: inline-block
-        width: 48px
-        height: 48px
-        border: 1px solid $link-color
-        vertical-align: middle

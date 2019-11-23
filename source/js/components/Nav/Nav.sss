@@ -1,50 +1,50 @@
 .nav
-    margin-left: 220px
+    grid-area: nav
     transition: all 0.2s ease-out
     @media $max-768
-        margin: 20px 0 0
-        clear: both
-    @media $max-580
-        position: fixed
-        z-index: 2
-        top: 0
-        left: 100vw
-        bottom: 0
-        width: 100vw
-        margin: 0
+        padding-top: 20px
+        align-self: center
+    @media $max-540
+        padding-top: 0
 
 
-@media $max-580
+@media $max-540
     .navActive
         composes: nav
-        left: 0
-        background-color: rgba($base-background-color, 0.5)
+        .btnNav
+            &:after
+                display: block
+        .list
+            right: 0
+            opacity: 1
 
 
 .list
     display: flex
     align-items: center
     justify-content: space-between
-    @media $max-580
-        position: absolute
+    @media $max-540
+        position: fixed
         top: 0
-        right: 0
+        right: -75vw
         bottom: 0
         display: block
         overflow-y: auto
-        width: 75%
+        width: 75vw
         padding: 10px 0
         background-color: $base-background-color
         box-shadow: 0 0 8px #000
+        opacity: 0
+        transition: right 0.2s ease-out, opacity 0.2s ease-out
 
 
 .item
-    margin: 0 10px
+    margin: 0 7.5px
     &:first-child
         margin-left: 0
     &:last-child
         margin-right: 0
-    @media $max-580
+    @media $max-540
         margin: 0
         text-align: right
 
@@ -52,7 +52,7 @@
 .link
     font-size: 1.143em
     color: $base-color
-    @media $max-580
+    @media $max-540
         display: block
         padding: 10px 20px
         background: none
@@ -62,17 +62,40 @@
             color: $base-background-color
 
 
-.close
+.linkActive
+    composes: link
+    color: $link-color
+
+
+.btnNav
+    position: relative
     display: none
-    @media $max-580
+    width: 38px
+    height: 38px
+    padding: 0
+    margin: 0
+    background: none
+    border: 1px solid $link-color
+    transition: all 0.2s ease-out
+    &:before
         position: absolute
+        left: 5px
+        right: 5px
+        top: 50%
+        height: 2px
+        margin-top: -1px
+        background-color: $link-color
+        border-radius: 1px
+        box-shadow: 0 9px 0 $link-color, 0 -9px 0 $link-color
+        content: ''
+    &:after
+        position: fixed
         top: 0
+        right: 0
+        bottom: 0
         left: 0
+        display: none
+        background-color: rgba($base-background-color, 0.5)
+        content: ''
+    @media $max-540
         display: block
-        width: 100%
-        height: 100%
-        margin: 0
-        padding: 0
-        background: none
-        border: 0 none
-        opacity: 0

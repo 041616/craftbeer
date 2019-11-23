@@ -13,7 +13,6 @@ export const Header = () => {
                 <Logo/>
                 <Slogan/>
                 <Nav/>
-                <div className={css.btnNav}/>
             </div>
         </div>
     );
