@@ -1,8 +1,9 @@
 import React from 'react';
+import { PrimaryHeadline } from '../../components/PrimaryHeadline';
 
 
 const Articles = () => (
-    <h1>Articles Page</h1>
+    <PrimaryHeadline>Articles Page</PrimaryHeadline>
 );
 
 

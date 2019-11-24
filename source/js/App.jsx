@@ -1,4 +1,4 @@
-import './Reset.sss';
+import 'styles/Reset.sss';
 
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
@@ -9,6 +9,7 @@ import { Content } from 'components/Content';
 import { Footer } from 'components/Footer';
 import { Main } from 'pages/Main';
 import { Articles } from 'pages/Articles';
+import { NotFound } from 'pages/NotFound';
 
 
 const App = () => (
@@ -17,12 +18,9 @@ const App = () => (
             <Header/>
             <Content>
                 <Switch>
-                    <Route exact path={URLS.MAIN}>
-                        <Main/>
-                    </Route>
-                    <Route exact path={URLS.ARTICLES}>
-                        <Articles/>
-                    </Route>
+                    <Route exact path={URLS.MAIN} component={Main}/>
+                    <Route exact path={URLS.ARTICLES} component={Articles}/>
+                    <Route component={NotFound}/>
                 </Switch>
             </Content>
             <Footer/>

@@ -27,7 +27,7 @@ module.exports = function(env, options) {
         module: {
             rules: [
                 {
-                    test: /\.svg$/,
+                    test: /\.svg$|.jpg$/,
                     use: {
                         loader: 'file-loader',
                         options: {
@@ -71,6 +71,7 @@ module.exports = function(env, options) {
                 components: path.resolve(__dirname, 'source/js/components'),
                 pages: path.resolve(__dirname, 'source/js/pages'),
                 utils: path.resolve(__dirname, 'source/js/utils'),
+                styles: path.resolve(__dirname, 'source/js/styles'),
                 root: __dirname,
             }
         },
