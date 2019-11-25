@@ -27,7 +27,7 @@ module.exports = function(env, options) {
         module: {
             rules: [
                 {
-                    test: /\.svg$|.jpg$/,
+                    test: /\.svg$|.jpg$|.png$/,
                     use: {
                         loader: 'file-loader',
                         options: {

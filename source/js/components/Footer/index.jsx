@@ -1,13 +1,14 @@
 import React from 'react';
-import { getCopyrightDate } from 'utils/copyright';
+import { getCopyrightDate } from 'utils';
 
 import css from './Footer.sss';
+import commonCss from 'styles/Common.sss';
 
 
 export const Footer = () => {
     return (
         <footer className={css.footer}>
-            <div className={css.container}>
+            <div className={commonCss.container}>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo

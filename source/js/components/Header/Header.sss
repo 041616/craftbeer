@@ -2,7 +2,8 @@
     padding: 20px
 
 
-.grid
+.container
+    composes: container from '../../styles/Common.sss'
     display: grid
     grid-template-areas: "logo slogan" "logo nav"
     grid-template-columns: auto 1fr
@@ -13,9 +14,3 @@
         grid-gap: 0 20px
     @media $max-540
         grid-template-areas: "logo slogan nav"
-
-
-.container
-    composes: grid
-    max-width: $max-width
-    margin: 0 auto
