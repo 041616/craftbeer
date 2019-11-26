@@ -3,6 +3,29 @@ const TerserJSPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HTML_PARAMS = require(path.resolve(__dirname, 'source/js/utils/pages')).HTML_PARAMS;
+const variables = require(path.resolve(__dirname, './postcss.variables.js'));
+
+
+const HTML_TEMPLATE_PARAMETERS = {
+    template: './source/html/index.html',
+    inject: 'head',
+    minify: mode === 'production',
+    templateParameters: {
+        themeColor: variables['base-background-color'],
+    },
+};
+
+
+function getTemplateParameters(filename, templateParameters) {
+    const parameters = Object.assign({}, HTML_TEMPLATE_PARAMETERS);
+    parameters.filename = filename;
+    parameters.templateParameters = Object.assign(
+        parameters.templateParameters,
+        templateParameters,
+    );
+    return parameters;
+}
 
 
 module.exports = function(env, options) {
@@ -79,17 +102,12 @@ module.exports = function(env, options) {
             new MiniCssExtractPlugin({
                 filename: mode === 'production' ? 'css/[name].[contenthash].css' : 'css/[name].css',
             }),
-            new HtmlWebpackPlugin({
-                template: './source/html/index.html',
-                inject: 'head',
-                minify: mode === 'production',
-            }),
-            new HtmlWebpackPlugin({
-                filename: 'articles.html',
-                template: './source/html/index.html',
-                inject: 'head',
-                minify: mode === 'production',
-            })
+            new HtmlWebpackPlugin(getTemplateParameters('index.html', HTML_PARAMS.index)),
+            new HtmlWebpackPlugin(getTemplateParameters('regulations.html', HTML_PARAMS.regulations)),
+            new HtmlWebpackPlugin(getTemplateParameters('activity.html', HTML_PARAMS.activity)),
+            new HtmlWebpackPlugin(getTemplateParameters('news.html', HTML_PARAMS.news)),
+            new HtmlWebpackPlugin(getTemplateParameters('articles.html', HTML_PARAMS.articles)),
+            new HtmlWebpackPlugin(getTemplateParameters('contacts.html', HTML_PARAMS.contacts)),
         ],
         optimization: {
             minimizer: [

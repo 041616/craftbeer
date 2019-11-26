@@ -29,7 +29,6 @@ const Container = withRouter(({ children, location = {} }) => {
 export const Logotype = () => (
     <Container>
         <picture>
-            <source srcSet={largeLogo} media='(min-width: 769px)'/>
             <source srcSet={mediumLogo} media='(max-width: 768px) and (min-width: 421px)'/>
             <source srcSet={smallLogo} media='(max-width: 420px)'/>
             <img className={css.logo} src={largeLogo} alt='Craftbeer Horishni Plavni'/>

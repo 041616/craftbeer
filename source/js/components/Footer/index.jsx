@@ -16,8 +16,8 @@ export const Footer = () => {
                 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
                 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 <p className={css.copyright}>
-                    &copy; Громадська Організація
-                    "Товариство шанувальників крафтового пива м. Горішні Плавні", {getCopyrightDate()}
+                    &copy; Громадська організація
+                    &laquo;Товариство шанувальників крафтового пива м. Горішні Плавні&raquo;, {getCopyrightDate()}
                 </p>
             </div>
         </footer>
