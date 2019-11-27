@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { MAIN, HTML_TEMPLATES_SETTINGS } from 'utils/pages';
+import postcssVariables from 'root/postcss.variables';
+
 import largeLogo from './images/logo-large.svg';
 import mediumLogo from './images/logo-medium.svg';
 import smallLogo from './images/logo-small.svg';
-import postcssVariables from 'root/postcss.variables';
 
 import css from './Logo.sss';
 
