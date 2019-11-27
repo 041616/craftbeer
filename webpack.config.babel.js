@@ -47,7 +47,7 @@ export default function(env, { mode }) {
                         loader: 'file-loader',
                         options: {
                             name: '[name].[ext]',
-                            publicPath: '/img/',
+                            publicPath: 'img/',
                             outputPath: '../public/img',
                         },
                     },
