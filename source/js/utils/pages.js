@@ -4,7 +4,7 @@ export const ACTIVITY = '/activity';
 export const NEWS = '/news';
 export const ARTICLES = '/articles';
 export const CONTACTS = '/contacts';
-export const HTML_PARAMS = {
+export const HTML_TEMPLATES_SETTINGS = {
     index: {
         title: 'Товариство шанувальників крафтового пива м. Горішні Плавні',
         metaDescription: 'Громадська організація «Товариство шанувальників крафтового пива м. Горішні Плавні»',

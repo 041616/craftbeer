@@ -1,18 +1,18 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
-import * as URLS from 'utils/pages';
+import * as pages from 'utils/pages';
 import { UID } from 'utils';
 
 import css from './Nav.sss';
 
 
 const MENU = [
-    { id: UID(), title: 'Головна', url: URLS.MAIN },
-    { id: UID(), title: 'Статут', url: URLS.REGULATIONS },
-    { id: UID(), title: 'Діяльність', url: URLS.ACTIVITY },
-    { id: UID(), title: 'Новини', url: URLS.NEWS },
-    { id: UID(), title: 'Статті', url: URLS.ARTICLES },
-    { id: UID(), title: 'Контакти', url: URLS.CONTACTS },
+    { id: UID(), title: 'Головна', url: pages.MAIN },
+    { id: UID(), title: 'Статут', url: pages.REGULATIONS },
+    { id: UID(), title: 'Діяльність', url: pages.ACTIVITY },
+    { id: UID(), title: 'Новини', url: pages.NEWS },
+    { id: UID(), title: 'Статті', url: pages.ARTICLES },
+    { id: UID(), title: 'Контакти', url: pages.CONTACTS },
 ];
 
 

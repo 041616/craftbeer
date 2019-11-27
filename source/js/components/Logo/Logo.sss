@@ -12,13 +12,14 @@
     width: 200px
     height: 175px
     margin: -15px 0 -75px 0
-    box-shadow: 0 0px 15px 15px $base-background-color
-    background: $base-background-color
+    border-radius: 50% 50% 0 0
+    box-shadow: 0 0px 15px 15px rgba($base-background-color, 0.6)
+    background-color: rgba($base-background-color, 0.6)
     transition: all 0.2s ease-out
     @media $max-768
+        border-radius: 0
         height: 58.7px
         margin: 0
-        box-shadow: none
         align-self: center
     @media $max-540
         width: 130px

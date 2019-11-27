@@ -2,7 +2,7 @@ import 'styles/Reset.sss';
 
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import * as URLS from 'utils/pages';
+import * as pages from 'utils/pages';
 import { Base } from 'components/Base';
 import { Header } from 'components/Header';
 import { Content } from 'components/Content';
@@ -18,8 +18,8 @@ const App = () => (
             <Header/>
             <Content>
                 <Switch>
-                    <Route exact path={URLS.MAIN} component={Main}/>
-                    <Route exact path={URLS.ARTICLES} component={Articles}/>
+                    <Route exact path={pages.MAIN} component={Main}/>
+                    <Route exact path={pages.ARTICLES} component={Articles}/>
                     <Route component={NotFound}/>
                 </Switch>
             </Content>
