@@ -12,26 +12,21 @@ import { Articles } from 'pages/Articles';
 import { NotFound } from 'pages/NotFound';
 
 
-const App = () => {
-    console.log('-------------------------------------------');
-    console.log(process.env.PUBLIC_URL);
-    console.log('-------------------------------------------');
-    return (
-        <BrowserRouter>
-            <Base>
-                <Header/>
-                <Content>
-                    <Switch>
-                        <Route exact path={pages.MAIN} component={Main}/>
-                        <Route exact path={pages.ARTICLES} component={Articles}/>
-                        <Route component={NotFound}/>
-                    </Switch>
-                </Content>
-                <Footer/>
-            </Base>
-        </BrowserRouter>
-    );
-};
+const App = () => (
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <Base>
+            <Header/>
+            <Content>
+                <Switch>
+                    <Route exact path={pages.MAIN} component={Main}/>
+                    <Route exact path={pages.ARTICLES} component={Articles}/>
+                    <Route component={NotFound}/>
+                </Switch>
+            </Content>
+            <Footer/>
+        </Base>
+    </BrowserRouter>
+);
 
 
 export default App;
