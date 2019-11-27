@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
-import { MAIN } from 'utils/pages';
+import { MAIN, HTML_TEMPLATES_SETTINGS } from 'utils/pages';
 import largeLogo from './images/logo-large.svg';
 import mediumLogo from './images/logo-medium.svg';
 import smallLogo from './images/logo-small.svg';
@@ -13,13 +13,17 @@ const Container = withRouter(({ children, location = {} }) => {
     if (location.pathname === MAIN) {
         return (
             <h1 className={css.container}>
-                Крафтове пиво, Горішні Плавні
+                {HTML_TEMPLATES_SETTINGS.index.title}
                 {children}
             </h1>
         );
     }
     return (
-        <Link className={css.container} to={MAIN}>
+        <Link
+            className={css.container}
+            to={MAIN}
+            title={HTML_TEMPLATES_SETTINGS.index.title}
+        >
             {children}
         </Link>
     );
