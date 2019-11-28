@@ -34,8 +34,8 @@ const Container = withRouter(({ children, location = {} }) => {
 export const Logo = () => (
     <Container>
         <picture>
-            <source srcSet={mediumLogo} media='(orientation: landscape) and (max-width: 768px) and (min-width: 421px), (orientation: portrait) and (max-width: 768px) and (min-width: 421px)'/>
-            <source srcSet={smallLogo} media='(orientation: landscape) and (max-width: 420px), (orientation: portrait) and (max-width: 420px)'/>
+            <source srcSet={mediumLogo} media='(max-width: 768px) and (min-width: 421px)'/>
+            <source srcSet={smallLogo} media='(max-width: 420px)'/>
             <img className={css.logo} src={largeLogo} alt='Craftbeer Horishni Plavni'/>
         </picture>
     </Container>

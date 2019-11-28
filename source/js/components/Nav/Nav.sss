@@ -1,6 +1,7 @@
 .nav
     grid-area: nav
     transition: all 0.2s ease-out
+    padding-top: 15px
     @media $max-768
         padding-top: 20px
         align-self: center
@@ -40,6 +41,7 @@
 
 .item
     margin: 0 7.5px
+    text-align: center
     &:first-child
         margin-left: 0
     &:last-child
@@ -52,6 +54,8 @@
 .link
     font-size: 1.143em
     color: $base-color
+    word-break: break-word
+    line-height: 1
     @media $max-540
         display: block
         padding: 10px 20px
