@@ -4,7 +4,7 @@ module.exports = {
     'base-background-image': 'img/bg.jpg',
     'link-color': '#fe6900',
     'max-width': '980px',
-    'font-size': '14px',
+    'font-size': '16px',
 
     // media (desktop first)
     'max-768': 'screen and (max-width: 768px)',
