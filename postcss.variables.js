@@ -7,7 +7,7 @@ module.exports = {
     'font-size': '14px',
 
     // media (desktop first)
-    'max-768': 'only screen and (max-width: 768px)',
-    'max-540': 'only screen and (max-width: 540px)',
-    'max-420': 'only screen and (max-width: 420px)',
+    'max-768': 'only screen and (orientation: landscape) and (orientation: portrait) and (max-width: 768px)',
+    'max-540': 'only screen and (orientation: landscape) and (orientation: portrait) and (max-width: 540px)',
+    'max-420': 'only screen and (orientation: landscape) and (orientation: portrait) and (max-width: 420px)',
 };
