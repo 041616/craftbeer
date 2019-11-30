@@ -1,0 +1,69 @@
+.overlay
+    position: fixed
+    left: 0
+    top: 0
+    right: 0
+    bottom: 0
+    overflow-y: auto
+    padding: 40px
+    background-color: rgba($base-background-color, 0.5)
+    text-align: center
+    white-space: nowrap
+    &:before
+        display: inline-block
+        width: 0
+        height: 100%
+        font-size: 0
+        line-height: 0
+        vertical-align: middle
+        content: ''
+
+
+.overlayBody
+    position: relative
+    display: inline-block
+    max-width: $max-width
+    min-width: 40vw
+    padding: 20px
+    background-color: $base-background-color
+    box-sizing: border-box
+    box-shadow: 0 0 8px #000
+    text-align: start
+    white-space: normal
+    vertical-align: middle
+
+
+.btnClose
+    position: absolute
+    top: 5px
+    right: 5px
+    width: 14px
+    height: 14px
+    padding: 0
+    border: 0 none
+    background: none
+    opacity: 0.65
+    transform: rotate(45deg)
+    cursor: pointer
+    &:hover
+        opacity: 1
+    &:before,
+    &:after
+        position: absolute
+        border-radius: 1px
+        background-color: $base-color
+        content: ''
+    &:before
+        top: 50%
+        left: 0
+        width: 100%
+        height: 2px
+        margin-top: -1px
+    &:after
+        top: 0
+        left: 50%
+        width: 2px
+        height: 100%
+        margin-left: -1px
+
+
