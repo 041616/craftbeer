@@ -21,22 +21,22 @@ class Navigation extends React.Component {
         super();
         this.state = { isNavActive: false };
         this.onClickHandler = this.onClickHandler.bind(this);
-        this.onWindowResizeHandler = this.onWindowResizeHandler.bind(this);
+        this.onOrientationChangeHandler = this.onOrientationChangeHandler.bind(this);
     }
 
     componentDidMount() {
-        window.addEventListener('resize', this.onWindowResizeHandler);
+        window.addEventListener('orientationchange', this.onOrientationChangeHandler);
     }
 
     componentWillUnmount() {
-        window.removeEventListener('resize', this.onWindowResizeHandler);
+        window.removeEventListener('orientationchange', this.onOrientationChangeHandler);
     }
 
     onClickHandler() {
         this.setState({ isNavActive: !this.state.isNavActive });
     }
 
-    onWindowResizeHandler() {
+    onOrientationChangeHandler() {
         if (this.state.isNavActive) {
             this.setState({ isNavActive: false });
         }
@@ -51,7 +51,7 @@ class Navigation extends React.Component {
                 <li className={css.item} key={id}>
                     <Link
                         className={linkClassName}
-                        onClick={this.onWindowResizeHandler}
+                        onClick={this.onOrientationChangeHandler}
                         to={url}
                     >{title}</Link>
                 </li>
