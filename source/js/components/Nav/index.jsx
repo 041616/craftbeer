@@ -33,12 +33,15 @@ class Navigation extends React.Component {
     }
 
     onClickHandler() {
-        this.setState({ isNavActive: !this.state.isNavActive });
+        const { isNavActive } = this.state;
+        this.setState({ isNavActive: !isNavActive });
+        document.body.style.overflow = isNavActive ? null : 'hidden';
     }
 
     onOrientationChangeHandler() {
         if (this.state.isNavActive) {
             this.setState({ isNavActive: false });
+            document.body.style.overflow = null;
         }
     }
 

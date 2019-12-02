@@ -20,14 +20,14 @@ menu, nav, section
     display: block
 
 html
-    height: 100%
     font-size: $font-size
     line-height: 1.5
     -webkit-text-size-adjust: 100%
 
 body
-    overflow: hidden
-    height: 100%
+    background-color: $base-background-color
+    background-repeat: no-repeat
+    background-size: 100% auto
     color: $base-color
 
 ol, ul
@@ -65,12 +65,3 @@ a
     &:hover
         color: $link-color
         background-size: 100% 1px
-
-:global(.application-container)
-    overflow: auto
-    height: 100%
-    background-color: $base-background-color
-    background-repeat: no-repeat
-    background-size: 100% auto
-    background-attachment: local
-    -webkit-overflow-scrolling: touch

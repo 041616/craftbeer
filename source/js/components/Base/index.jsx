@@ -45,7 +45,7 @@ export const Base = withRouter(({ children, location = {} }) => {
     const description = settings.metaDescription;
     const keywords = settings.metaKeywords;
     const image = page.background || unknown;
-    const style = `.application-container{background-image:url(${image})}`;
+    const style = `body{background-image:url(${image})}`;
     return (
         <div className={css.grid}>
             <Helmet>

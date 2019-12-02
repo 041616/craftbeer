@@ -1,9 +1,13 @@
 import React from 'react';
-import { PrimaryHeadline } from '../../components/PrimaryHeadline';
+import { PrimaryHeadline } from 'components/PrimaryHeadline';
+import { RegistrationLink } from 'components/RegistrationLink';
 
 
 const Articles = () => (
-    <PrimaryHeadline>Articles Page</PrimaryHeadline>
+    <React.Fragment>
+        <PrimaryHeadline>Articles Page</PrimaryHeadline>
+        <RegistrationLink/>
+    </React.Fragment>
 );
 
 
