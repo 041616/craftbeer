@@ -4,3 +4,61 @@
         margin-top: 0
     &:last-child
         margin-bottom: 0
+
+
+ol.numberedList
+    display: table
+    list-style: none
+    width: 100%
+    margin: 0
+    padding: 0
+    counter-reset: counter-level-1
+    & > li
+        &:first-child:before
+            padding-top: 0
+        &:last-child > ol
+            margin-bottom: 0
+        &:before
+            content: counter(counter-level-1)'.'
+            counter-increment: counter-level-1
+        & > ol
+            margin: 10px 0
+            counter-reset: counter-level-2
+            & > li
+                &:before
+                    content: counter(counter-level-1)'.'counter(counter-level-2)'.'
+                    counter-increment: counter-level-2
+                & > ol
+                    counter-reset: counter-level-3
+                    & > li
+                        &:before
+                            content: counter(counter-level-1)'.'counter(counter-level-2)'.'counter(counter-level-3)'.'
+                            counter-increment: counter-level-3
+                        & > ol
+                            counter-reset: counter-level-4
+                            & > li
+                                &:before
+                                    content: counter(counter-level-1)'.'counter(counter-level-2)'.'counter(counter-level-3)'.'counter(counter-level-4)'.'
+                                    counter-increment: counter-level-4
+                                & > ol
+                                    counter-reset: counter-level-5
+                                    & > li
+                                        &:before
+                                            content: counter(counter-level-1)'.'counter(counter-level-2)'.'counter(counter-level-3)'.'counter(counter-level-4)'.'counter(counter-level-5)'.'
+                                            counter-increment: counter-level-5
+    & ol
+        display: table
+        list-style: none
+        width: 100%
+        margin: 0
+        padding: 0
+        text-transform: none
+    & li
+        display: table-row
+        &:before
+            display: table-cell
+            padding: 10px 0.3em 0 0
+
+
+ol.numberedListMainLevelUppercase
+    text-transform: uppercase

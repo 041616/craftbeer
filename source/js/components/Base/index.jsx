@@ -17,7 +17,7 @@ const PAGES = {
     },
     [pages.REGULATIONS]: {
         name: 'regulations',
-        background: process,
+        background: main,
     },
     [pages.ACTIVITY]: {
         name: 'activity',

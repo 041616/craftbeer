@@ -2,14 +2,14 @@ import React from 'react';
 import { PrimaryHeadline } from 'components/PrimaryHeadline';
 import { RegistrationLink } from 'components/RegistrationLink';
 
-import css from 'styles/Text.sss';
+import textCss from 'styles/Text.sss';
 
 
-const Main = () => (
+export const Main = () => (
     <React.Fragment>
         <PrimaryHeadline>Головна</PrimaryHeadline>
-        <p className={css.paragraph}>«Craft» &mdash; майстерна робота, ремесло.</p>
-        <p className={css.paragraph}>
+        <p className={textCss.paragraph}>«Craft» &mdash; майстерна робота, ремесло.</p>
+        <p className={textCss.paragraph}>
             В крафтовому пиві Ви не знайдете жодних сторонніх добавок, в тому
             числі допустимих ГОСТ. При виготовленні пива використовуються тільки
             натуральні інгредієнти: ячмінний солод, хміль, дріжджі і вода.
@@ -18,7 +18,7 @@ const Main = () => (
             термін придатності у нього невеликий. Але, зате смак і
             якість &mdash; чудові. У чому заключається сам процес?
         </p>
-        <p className={css.paragraph}>
+        <p className={textCss.paragraph}>
             Ячмінний солод після помолу змішується з водою і нагрівається до
             того моменту коли весь крохмаль який є в солоді не перетвориться в
             цукор. Далі відфільтроване, солодке сусло вариться з додаванням
@@ -26,28 +26,25 @@ const Main = () => (
             сусло. Через деякий час дріжджі, в процесі бродіння, перетворять
             весь цукор, що міститься в суслі, на спирт і вуглекислий газ.
         </p>
-        <p className={css.paragraph}>
+        <p className={textCss.paragraph}>
             Отриманий напій може разюче різнитися як кольором, так і смаком в
             залежності від того, який використовувався солод, рівень його
             прожарювання і т.д. Що стосується знайомої всім гіркуватості, то за
             неї відповідає саме хміль.
         </p>
-        <p className={css.paragraph}>
+        <p className={textCss.paragraph}>
             По-справжньому дізнатися, що означає крафтове пиво, можна тільки
             скоштувавши його.
         </p>
-        <p className={css.paragraph}>
+        <p className={textCss.paragraph}>
             Отже, якщо Ви хочете спробувати власноруч варити сравжнє пиво, або
             запропонувати авторський рецепт, або продегустувати вже готове
             крафтове пиво, або просто дізнатися більше про
             крафт &mdash; запршуємо до Товариства шанувальників крафтового пива
             м. Горішні Плавні
         </p>
-        <p className={css.paragraph}>
+        <p className={textCss.paragraph}>
             <RegistrationLink/>
         </p>
     </React.Fragment>
 );
-
-
-export { Main };

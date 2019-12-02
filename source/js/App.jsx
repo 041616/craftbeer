@@ -12,7 +12,7 @@ import { Content } from 'components/Content';
 import { Footer } from 'components/Footer';
 import { RegistrationOverlay } from 'components/RegistrationOverlay';
 import { Main } from 'pages/Main';
-import { Articles } from 'pages/Articles';
+import { Regulations } from 'pages/Regulations';
 import { NotFound } from 'pages/NotFound';
 import { reducer } from './reducer';
 import initialState from './init';
@@ -29,7 +29,7 @@ const App = () => {
                     <Content>
                         <Switch>
                             <Route exact path={pages.MAIN} component={Main}/>
-                            <Route exact path={pages.ARTICLES} component={Articles}/>
+                            <Route exact path={pages.REGULATIONS} component={Regulations}/>
                             <Route component={NotFound}/>
                         </Switch>
                     </Content>
