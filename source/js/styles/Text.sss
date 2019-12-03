@@ -20,14 +20,19 @@ ol.numberedList
             margin-right: 0.3em
             content: counter(counter-level-1)'.'
             counter-increment: counter-level-1
+            opacity: 0.65
         & > ol
             margin-top: 10px
             counter-reset: counter-level-2
+            & ul li:before
+                padding-top: 0
             & li
                 display: table-row
                 &:before
                     display: table-cell
+                    width: 1px
                     padding: 10px 0.3em 0 0
+                    opacity: 0.65
             & > li
                 &:before
                     content: counter(counter-level-1)'.'counter(counter-level-2)'.'
@@ -50,13 +55,16 @@ ol.numberedList
                                         &:before
                                             content: counter(counter-level-1)'.'counter(counter-level-2)'.'counter(counter-level-3)'.'counter(counter-level-4)'.'counter(counter-level-5)'.'
                                             counter-increment: counter-level-5
-    & ol
+    & ol, & ul
         display: table
         list-style: none
         width: 100%
         margin: 0
         padding: 0
         text-transform: none
+    & ul li:before
+        padding-right: 0.3em
+        content: '-'
 
 
 ol.numberedListMainLevelUppercase
