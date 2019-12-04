@@ -9,7 +9,6 @@ import css from './Nav.sss';
 const MENU = [
     { id: UID(), title: 'Головна', url: pages.MAIN },
     { id: UID(), title: 'Статут', url: pages.REGULATIONS },
-    { id: UID(), title: 'Діяльність', url: pages.ACTIVITY },
     { id: UID(), title: 'Новини', url: pages.NEWS },
     { id: UID(), title: 'Статті', url: pages.ARTICLES },
     { id: UID(), title: 'Контакти', url: pages.CONTACTS },

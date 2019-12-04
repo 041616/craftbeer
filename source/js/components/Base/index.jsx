@@ -19,10 +19,6 @@ const PAGES = {
         name: 'regulations',
         background: main,
     },
-    [pages.ACTIVITY]: {
-        name: 'activity',
-        background: process,
-    },
     [pages.NEWS]: {
         name: 'news',
         background: process,

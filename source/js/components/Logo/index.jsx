@@ -36,7 +36,7 @@ export const Logo = () => (
         <picture>
             <source srcSet={mediumLogo} media='(max-width: 768px) and (min-width: 421px)'/>
             <source srcSet={smallLogo} media='(max-width: 420px)'/>
-            <img className={css.logo} src={largeLogo} alt='Craftbeer Horishni Plavni'/>
+            <img className={css.logo} src={largeLogo} alt='Craft Beer Horishni Plavni'/>
         </picture>
     </Container>
 );
