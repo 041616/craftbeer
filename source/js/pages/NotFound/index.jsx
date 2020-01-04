@@ -1,8 +1,13 @@
 import React from 'react';
+import { CenteredMessage } from 'components/CenteredMessage';
 
 
 export const NotFound = () => (
     <React.Fragment>
-        404
+        <br/><br/><br/>
+        <CenteredMessage>
+            404<br/>
+            Сторінку не знайдено
+        </CenteredMessage>
     </React.Fragment>
 );
