@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { getVerticalScrollbarWidth } from 'utils/dom';
 import { useStateValue } from 'components/StateProvider';
 
