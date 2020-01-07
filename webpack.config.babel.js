@@ -52,6 +52,16 @@ export default function(env, { mode }) {
                         },
                     },
                 }, {
+                    test: /\.txt$|.pdf$/,
+                    use: {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            publicPath: 'doc/',
+                            outputPath: '../public/doc',
+                        },
+                    },
+                }, {
                     test: /\.jsx?$/,
                     exclude: /node_modules/,
                     use: {

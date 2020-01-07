@@ -3,11 +3,17 @@ import { PrimaryHeadline } from 'components/PrimaryHeadline';
 
 import textCss from 'styles/Text.sss';
 
+import txt from './documents/regulations.txt';
+import pdf from './documents/regulations.pdf';
+
 
 export const Regulations = () => (
     <React.Fragment>
         <PrimaryHeadline>
             Статут громадської організації &laquo;Товариство шанувальників крафтового пива м.&nbsp;Горішні&nbsp;Плавні&raquo;
+            (<a href={txt} target='_blank'>txt</a>,
+            {' '}
+            <a href={pdf} target='_blank'>pdf</a>)
         </PrimaryHeadline>
         <ol className={`${textCss.numberedList} ${textCss.numberedListMainLevelUppercase}`}>
             <li id='organization-terms'>
