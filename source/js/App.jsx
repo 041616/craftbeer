@@ -12,6 +12,7 @@ import { Header } from 'components/Header';
 import { Content } from 'components/Content';
 import { Footer } from 'components/Footer';
 import { RegistrationOverlay } from 'components/RegistrationOverlay';
+import { ButtonUp } from 'components/ButtonUp';
 import { Main } from 'pages/Main';
 import { Regulations } from 'pages/Regulations';
 import { News } from 'pages/News';
@@ -44,6 +45,7 @@ const App = () => {
                     <Footer/>
                 </div>
             </Router>
+            <ButtonUp/>
             <RegistrationOverlay/>
         </StateProvider>
     );
