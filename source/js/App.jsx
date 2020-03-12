@@ -27,7 +27,7 @@ const App = () => {
     const Router = !window ? StaticRouter : BrowserRouter ;
     return (
         <StateProvider initialState={initialState} reducer={reducer}>
-            <Router basename={basename}>
+            <Router>
                 <Meta/>
                 <div className={commonCss.grid}>
                     <Header/>
