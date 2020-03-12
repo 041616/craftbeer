@@ -24,10 +24,11 @@ import initialState from './init';
 
 
 const App = () => {
-    const Router = !window ? StaticRouter : BrowserRouter ;
+    const Router = !window ? StaticRouter : BrowserRouter;
+    const basename = HOST_MAP[getWindowLocationHostname()];
     return (
         <StateProvider initialState={initialState} reducer={reducer}>
-            <Router>
+            <Router basename={basename}>
                 <Meta/>
                 <div className={commonCss.grid}>
                     <Header/>
